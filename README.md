@@ -1,10 +1,12 @@
-# Snow Monkey Design Skin Gosky
+# Gosky
 
-Snow Monkey Design Skin Gosky は [Snow Monkey](https://snow-monkey.2inc.org/) のデザインスキンです。
+Gosky は [Snow Monkey](https://snow-monkey.2inc.org/) のデザインスキンです。
+
+![gosky](https://user-images.githubusercontent.com/84167/41471099-9ac74204-70ed-11e8-8af6-1034f4d50845.png)
 
 ## インストール方法
 
-1. [こちらのページ](https://github.com/ko31/snow-monkey-design-skin-gosky/releases)から zip ファイルをダウンロードダウンロードしてください。
+1. [こちらのページ](https://github.com/ko31/snow-monkey-design-skin-gosky/releases)から zip ファイルをダウンロードしてください。
 2. WordPress 管理画面の [プラグイン] > [新規追加] から zip ファイルをアップロードし、Snow Monkey Design Skin Gosky を [有効化] してください。 
 3. [外観] > [カスタマイズ] > [デザインスキン] を開き、Snow Monkey Design Skin Gosky を選択して [公開] ボタンを押してください。 
 
