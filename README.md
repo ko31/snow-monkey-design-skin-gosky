@@ -25,10 +25,16 @@ Snow Monkey Design Skin Gosky は [Snow Monkey](https://snow-monkey.2inc.org/) �
 
 また、主に次のような箇所の見た目がデザインスキン特有のものに変わります。
 
+* フォントに [Google Fonts（M+ 1p）](https://googlefonts.github.io/japanese/#mplus1p) を使用
 * ページヘッダー画像にマスクがかかる
 * 各ウィジェットの見出し
 * 強調タグの装飾
 
+## サンプル
+
+こちらのサイトで使っています。
+
+* https://blog.ko31.com/
 
 ## Third Party Resources
 
