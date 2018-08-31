@@ -1,0 +1,29 @@
+sudo: false
+language: php
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+php:
+- 5.6
+- 7.0
+env:
+- WP_VERSION=latest WP_MULTISITE=0
+- WP_VERSION=nightly WP_MULTISITE=0
+before_script:
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- composer install
+script:
+- phpunit
+after_success:
+- sed -i -e "s/nightly/${TRAVIS_TAG}/" $(basename $TRAVIS_REPO_SLUG).php
+- curl https://raw.githubusercontent.com/miya0001/auto-build/master/auto-build.sh | bash
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: BGY7oUApRkz67aZspeooREgAsh85fGGj8dkw4gI2lkwi4Zuz8rN+Qd9kY1TSPBv6mG1Kx06u1j1je8dDnMcgKwWMQhtsI7BXuaORccAHYaNXZQGmmAarZ2ed6NTJiVdskLpTdnn5+VA0SxxiifEQC7aJZdc6ftw3nzf7aeN7WTpxyz6CTAA6EjD2KvOQ/LPgv1vJwfu9AxUIlrhhh1DOQS/pr0tGxMuB777n1YcNh+AGje9lkx0VpHRzebO/NbMbWnzbn+iv+EWHcnYh11mD62BtrSqMzEYzi5fxFxUwDdxFN47KYXqaE5Hoyb7/i13c+JvbFAx6SeEqssiYewBT7y4WITCRQVnBCantmyCYbasRPUCk3RKlK/y2y7PswYhQMBTVdwoanLZ0C3ZknLUxd/yCqg8XHBcRWMc29zQ5n1w89yQN+WY+evWT1DfZr+K293jbNKMmGuSE6dzb6LY9Ercg8/hIfx6xlh0u81om1AHS6+t1DSsMd9ilH4s1cuq7/jzhEtvRanD8RSJd3seHmnGHa/nkyZB62lmBgH9iirjxkyupj26wCbhm2IGWWsHti70oaeKhAR8Af25RNspSlnabql7n/9wfVpogBRVVz9ST6CxnEsEYKUdLbyv6jWEkPGPJ02tPqh4WlMtJyJytRWVMXe2EOhJG2MZ6NntwtLQ=
+  file: $(basename $TRAVIS_REPO_SLUG).zip
+  on:
+    tags: true
+    repo: ko31/snow-monkey-design-skin-gosky

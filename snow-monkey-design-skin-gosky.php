@@ -2,13 +2,22 @@
 /**
  * Plugin name: Snow Monkey Design Skin Gosky
  * Description: Snow Monkey のデザインスキンです。
- * Version:			1.0.0
+ * Version:			nightly
  * Author:			Ko Takagi
  * Author URI:	https://go-sign.info
  * License:			GPLv2
  */
 
+require_once( __DIR__ . '/vendor/autoload.php' );
+
 add_action( 'plugins_loaded', function() {
+	add_action( 'init', function() {
+		$plugin_slug = plugin_basename( __FILE__ );
+		$gh_user = 'ko31';
+		$gh_repo = 'snow-monkey-design-skin-gosky';
+		new Miya\WP\GH_Auto_Updater( $plugin_slug, $gh_user, $gh_repo );
+	} );
+
 	add_filter( 'snow_monkey_design_skin_choices', function( $choices ) {
 		$plugin_data = get_file_data( __FILE__, [
 			'label' => 'Plugin Name',
