@@ -51,3 +51,19 @@ Gosky は [Snow Monkey](https://snow-monkey.2inc.org/) のデザインスキン�
 
 * https://github.com/miya0001/gh-auto-updater
 * GPL v2
+
+## Changelog
+
+### 1.1.2
+
+* Fixed bug
+
+### 1.1.0
+
+* Add automatic updater
+* Fixed bugs
+
+### 1.0.0
+
+* Initial Release
+
