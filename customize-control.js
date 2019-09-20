@@ -4,8 +4,14 @@
   api.bind('ready', function() {
 
     // 記事一覧部分のレイアウト：非表示
-    api.control('archive-layout').container.remove();
-    api.control.remove('archive-layout');
+    if (api.control('archive-layout')) {
+      api.control('archive-layout').container.remove();
+      api.control.remove('archive-layout');
+    }
+    if (api.control('post-entries-layout')) {
+      api.control('post-entries-layout').container.remove();
+      api.control.remove('post-entries-layout');
+    }
 
     // 個別投稿ページのレイアウト：非表示
     api.control('singular-post-layout').container.remove();
