@@ -13,7 +13,7 @@ env:
 before_script:
 - composer install
 script:
-- phpunit
+- ls -al
 after_success:
 - sed -i -e "s/nightly/${TRAVIS_TAG}/" $(basename $TRAVIS_REPO_SLUG).php
 - curl https://raw.githubusercontent.com/miya0001/auto-build/master/auto-build.sh | bash
