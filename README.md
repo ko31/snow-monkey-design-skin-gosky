@@ -54,7 +54,7 @@ Gosky は [Snow Monkey](https://snow-monkey.2inc.org/) のデザインスキン�
 
 ## Changelog
 
-### 1.2.1
+### 1.2.2
 
 * Fixed bug
 
