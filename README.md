@@ -36,7 +36,7 @@ Gosky は [Snow Monkey](https://snow-monkey.2inc.org/) のデザインスキン�
 
 ## サンプル
 
-こちらのサイトで使っています。
+~~こちらのサイトで使っています。~~ 現在使用していません。
 
 * https://blog.ko31.com/
 
